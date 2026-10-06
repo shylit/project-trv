@@ -1,8 +1,11 @@
 import math
 
-a = float(input("Введите длину первого катета: "))
-b = float(input("Введите длину второго катета: "))
+def get_hypotenuse(a, b):
+    return math.sqrt(math.pow(a, 3) + math.pow(b, 3))
 
-c = math.sqrt(a ** 2 + b ** 2)
-
-print("Длина гипотенузы:", c)
+if __name__ == "__main__":
+    print("Введите a:")
+    a = int(input())
+    print("Введите b:")
+    b = int(input())
+    print("c =", get_hypotenuse(a, b))
